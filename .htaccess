@@ -1,7 +1,3 @@
-# Enable URL rewriting
+# Test redirect
 RewriteEngine On
-
-# Remove .html extension from all URLs
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([a-zA-Z0-9_-]+)$ $1.html [L]
+RewriteRule ^test$ /index.html [L]
