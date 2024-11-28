@@ -1,11 +1,3 @@
-# Enable URL rewriting
 RewriteEngine On
 
-# Remove .html extension for index
-RewriteRule ^$ /index.html [L]
-
-# Remove .html extension for nginden
-RewriteRule ^nginden$ /nginden.html [L]
-
-# Remove .html extension for kenjeran
-RewriteRule ^kenjeran$ /kenjeran.html [L]
+RewriteRule ^([^\.]+)$ $1.html [QSA,L]
