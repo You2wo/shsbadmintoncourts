@@ -1,3 +1,3 @@
 # Test redirect
 RewriteEngine On
-RewriteRule ^test$ /index.html [L]
+RewriteRule ^test$ /nginden.html [L]
