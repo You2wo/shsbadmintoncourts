@@ -1,3 +1,7 @@
-# Test redirect
+# Enable URL rewriting
 RewriteEngine On
-RewriteRule ^test$ /nginden.html [L]
+
+# Remove .html extension from all URLs
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-zA-Z0-9_-]+)$ $1.html [L]
